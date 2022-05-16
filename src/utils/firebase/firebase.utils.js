@@ -16,29 +16,7 @@ const firebaseConfig = {
     appId: "1:791946884544:web:1eb90e79273711a6320425"
 };
 
-// Initialize Firebase
-// const firebaseApp = initializeApp(firebaseConfig);
-
-// const provider = new GoogleAuthProvider();
-
-// provider.setCustomParameters({
-//     prompt: 'select_account'
-// });
-
-// export const auth = getAuth();
-// export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
-
-// // this is the database for the firestore
-// export const db = getFirestore();
-
-// export const createUserDocumentFromAuth = async (userAuth) => {
-//     const userDocRef = doc(db, 'users', userAuth.uid);
-//     console.log(userDocRef);
-
-//     const userSnapshot = getDoc(userDocRef);
-//     console.log(userSnapshot)
-// }
-
+// // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 
 const provider = new GoogleAuthProvider();
