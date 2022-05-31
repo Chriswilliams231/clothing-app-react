@@ -1,17 +1,18 @@
 import { createContext, useState } from "react";
 
-const addCartItem = (cartItems, productToAdd) => {
-  // this finds if cartItem contains productToAdd
+export const addCartItem = (cartItems, productToAdd) => {
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === productToAdd.id
   );
 
-  //   this is if the product is found, add the quantity
   if (existingCartItem) {
-    return cartItems.map();
+    return cartItems.map((cartItem) =>
+      cartItem.id === productToAdd.id
+        ? { ...cartItem, quantity: cartItem.quantity + 1 }
+        : cartItem
+    );
   }
 
-  // returns a new array with modified cartItems and or new cart items
   return [...cartItems, { ...productToAdd, quantity: 1 }];
 };
 
@@ -24,12 +25,12 @@ export const CartContext = createContext({
 
 export const CartProvider = ({ children }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const { cartItems, setCartItems } = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
-  const addItemToCart = (productToAdd) => {
-    setCartItems(addCartItem(cartItems, productToAdd));
+  const addItemToCart = (product) => {
+    setCartItems(addCartItem(cartItems, product));
   };
 
-  const value = { isCartOpen, setIsCartOpen };
+  const value = { isCartOpen, setIsCartOpen, cartItems, addItemToCart };
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
