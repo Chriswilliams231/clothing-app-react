@@ -23,18 +23,3 @@ export const ItemDetails = styled.div`
 export const ItemName = styled(ItemDetails)`
   font-size: 16px;
 `;
-
-// .cart-item-container {
-//
-//   img {
-//
-//   }
-
-//   .item-details {
-//
-
-//     .name {
-//
-//     }
-//   }
-// }
