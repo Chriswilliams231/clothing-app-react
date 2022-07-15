@@ -101,14 +101,13 @@ export const CartProvider = ({ children }) => {
       0
     );
 
-    dispatch({
-      type: CART_ACTION_TYPES.SET_CART_ITEMS,
-      payload: {
+    dispatch(
+      createAction(CART_ACTION_TYPES.SET_CART_ITEMS, {
         cartItems: newCartItems,
         cartTotal: newCartTotal,
         cartCount: newCartCount,
-      },
-    });
+      })
+    );
   };
 
   const addItemToCart = (product) => {
@@ -126,7 +125,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const setIsCartOpen = (Boolean) => {
-    dispatch({ type: CART_ACTION_TYPES.SET_IS_CART_OPEN, payload: Boolean });
+    dispatch(createAction(CART_ACTION_TYPES.SET_IS_CART_OPEN, Boolean));
   };
 
   const value = {
