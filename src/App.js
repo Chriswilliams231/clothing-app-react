@@ -6,18 +6,21 @@ import Authentication from './routes/authentication/authentication.components';
 import Shop from './routes/shop/shop.components';
 import Checkout from './routes/checkout/checkout.components'
 
-
+import { GlobalStyle } from './global.styles';
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Navigation />} >
-        <Route index element={<Home />} />
-        {/* the shop component will have nested routes within it */}
-        <Route path='shop/*' element={<Shop />} />
-        <Route path='auth' element={<Authentication />} />
-        <Route path="checkout" element={<Checkout />} />
-      </Route>
-    </Routes>
+    <>
+      <GlobalStyle />
+      <Routes>
+        <Route path="/" element={<Navigation />} >
+          <Route index element={<Home />} />
+          {/* the shop component will have nested routes within it */}
+          <Route path='shop/*' element={<Shop />} />
+          <Route path='auth' element={<Authentication />} />
+          <Route path="checkout" element={<Checkout />} />
+        </Route>
+      </Routes>
+    </>
   );
 
 }

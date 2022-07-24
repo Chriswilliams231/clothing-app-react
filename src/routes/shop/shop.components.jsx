@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import CategoriesPreview from "../categories-preview/categories-preview.components";
 import Category from "../category/category.components";
-import { ProductsContainer } from "./shop.styles";
+
 const Shop = () => {
   return (
     <Routes>
