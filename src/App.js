@@ -17,6 +17,7 @@ import Checkout from './routes/checkout/checkout.components'
 import { setCurrentUser } from './store/user/user.action'
 
 import { GlobalStyle } from './global.styles';
+
 const App = () => {
   const dispatch = useDispatch();
 
@@ -25,15 +26,18 @@ const App = () => {
       if (user) {
         createUserDocumentFromAuth(user);
       }
+
       dispatch(setCurrentUser(user));
     });
 
     return unsubscribe;
   }, [dispatch]);
 
+
+
   return (
     <>
-      {/* <GlobalStyle /> */}
+      <GlobalStyle />
       <Routes>
         <Route path="/" element={<Navigation />} >
           <Route index element={<Home />} />

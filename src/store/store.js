@@ -3,8 +3,10 @@ import logger from 'redux-logger';
 
 import { rootReducer } from './root-reducer';
 
-const middleWares = [logger];
+const middleWares = [process.env.NODE_ENV === 'development' && logger].filter(
+    Boolean
+);
 
-const composedEndhancers = compose(applyMiddleware(...middleWares));
+const composedEnhancers = compose(applyMiddleware(...middleWares));
 
-export const store = createStore(rootReducer, undefined, composedEndhancers);
+export const store = createStore(rootReducer, undefined, composedEnhancers)
