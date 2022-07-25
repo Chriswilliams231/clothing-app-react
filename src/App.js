@@ -33,7 +33,7 @@ const App = () => {
 
   return (
     <>
-      <GlobalStyle />
+      {/* <GlobalStyle /> */}
       <Routes>
         <Route path="/" element={<Navigation />} >
           <Route index element={<Home />} />

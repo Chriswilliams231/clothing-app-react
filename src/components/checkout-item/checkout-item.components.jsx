@@ -8,7 +8,6 @@ import {
   ImageContainer,
   Name,
   Quantity,
-  CheckoutPrice,
   Value,
   RemoveButton,
   Arrow,

@@ -4,11 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import App from './App';
-
 import { CategoriesProvider } from './contexts/categories.context';
 import { CartProvider } from './contexts/cart.context';
-import { store } from './store/store';
 
+import { store } from './store/store'
 
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
