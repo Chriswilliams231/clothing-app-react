@@ -3,7 +3,7 @@ import Button from "../button/button.components";
 
 
 export const ProductCardContainer = styled.div`
-  width: 100%;
+  width: 22vw;
   display: flex;
   flex-direction: column;
   height: 350px;
