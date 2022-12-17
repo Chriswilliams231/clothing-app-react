@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Button from "../button/button.components";
+import CustomButton from "../button/button.components";
 
 
 export const ProductCardContainer = styled.div`
@@ -41,7 +41,7 @@ export const BackgroundImage = styled.img`
   margin-bottom: 5px;
 `;
 
-export const AddButton = styled(Button)`
+export const AddButton = styled(CustomButton)`
   width: 80%;
   opacity: 0.7;
   position: absolute;

@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
-import Button from "../button/button.components";
 import CartItem from "../cart-item/cart-item.components";
 import { selectCartItems } from "../../store/cart/cart.selector";
 
@@ -9,6 +8,7 @@ import {
   CartDropdownContainer,
   CartItems,
   EmptyMessage,
+  CartDropdownButton
 } from "./cart-dropdown.styles";
 
 const CartDropdown = () => {
@@ -28,7 +28,7 @@ const CartDropdown = () => {
           <EmptyMessage>Your Cart is empty</EmptyMessage>
         )}
       </CartItems>
-      <Button onClick={goToCheckoutHandler}> CHECKOUT </Button>
+      <CartDropdownButton onClick={goToCheckoutHandler}> CHECKOUT </CartDropdownButton>
     </CartDropdownContainer>
   );
 };
