@@ -25,6 +25,7 @@ export const ProductCardContainer = styled.div`
 
   @media screen and (max-width: 800px) {
     width: 40vw;
+
     &:hover {
       .image {
         opacity: unset;
@@ -37,6 +38,8 @@ export const ProductCardContainer = styled.div`
 export const BackgroundImage = styled.img`
   width: 100%;
   height: 95%;
+  background-size: cover;
+  background-position: center;
   object-fit: cover;
   margin-bottom: 5px;
 `;
